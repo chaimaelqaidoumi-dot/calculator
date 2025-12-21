@@ -1,13 +1,18 @@
 plugins {
 	id 'java'
+<<<<<<< HEAD
 	id 'eclipse' // optional (to generate Eclipse project files)
 	id 'idea' // optional (to generate IntelliJ IDEA project files)
 	id 'jacoco'
+=======
+	id 'idea' // optional (to generate IntelliJ IDEA project files)
+>>>>>>> 1e3fb49dae408ee99b8ca3f099a59c0e7a554d18
 }
 
 repositories {
 	mavenCentral()
 }
+<<<<<<< HEAD
 
 dependencies {
 	testImplementation(platform('org.junit:junit-bom:5.10.0'))
@@ -46,3 +51,19 @@ jacocoTestCoverageVerification {
 check.dependsOn jacocoTestCoverageVerification // ce qui fait reussir / echouer le build
 
 
+=======
+dependencies {
+    testImplementation(platform('org.junit:junit-bom:5.10.0'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation ('org.assertj:assertj-core:3.24.2')
+    testImplementation(platform('org.junit:junit-bom:5.10.1'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+
+}
+>>>>>>> 1e3fb49dae408ee99b8ca3f099a59c0e7a554d18
